@@ -4,16 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c598108f-50ff-46af-b947-e45874c02661" name="Changes" comment="backend basics">
-      <change afterPath="$PROJECT_DIR$/backend/silant/serializers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/silant/urls.py" afterDir="false" />
+    <list default="true" id="c598108f-50ff-46af-b947-e45874c02661" name="Changes" comment="started front">
+      <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/ProtectedRoute.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/api/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/Card.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/StatCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/auth/Login.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/auth/Register.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/complaints/ComplaintForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/complaints/ComplaintList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/machines/MachineDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/machines/MachineForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/machines/MachineList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/maintenance/MaintenanceForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/components/maintenance/MaintenanceList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ComplaintsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MachinesPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MaintenancePage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/authSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/store/machinesSlice.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/backend/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/backend/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/silant/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/silant/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/silant/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/silant/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/silant/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/silant/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +45,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/backend/silant/models.py" root0="FORCE_HIGHLIGHTING" />
@@ -81,11 +98,29 @@
       <option name="project" value="LOCAL" />
       <updated>1746116363348</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="backend v2 + started front">
+      <option name="closed" value="true" />
+      <created>1746200940928</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1746200940929</updated>
+    </task>
+    <task id="LOCAL-00004" summary="started front">
+      <option name="closed" value="true" />
+      <created>1746200993505</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746200993505</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="backend basics" />
-    <option name="LAST_COMMIT_MESSAGE" value="backend basics" />
+    <MESSAGE value="backend v2 + started front" />
+    <MESSAGE value="started front" />
+    <option name="LAST_COMMIT_MESSAGE" value="started front" />
   </component>
 </project>
