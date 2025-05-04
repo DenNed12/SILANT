@@ -1,4 +1,4 @@
-import { Card, StatCard } from '../components/ui/Card';
+import { Card, StatCard } from '../components/UI/Card';
 
 function Dashboard() {
   return (

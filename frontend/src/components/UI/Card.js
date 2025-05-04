@@ -1,3 +1,6 @@
+import React from 'react';
+import { Link } from 'react-router-dom'; // Добавьте этот импорт
+
 export function Card({ title, children, className = '' }) {
   return (
     <div className={`bg-white p-6 rounded-lg shadow ${className}`}>
@@ -9,7 +12,7 @@ export function Card({ title, children, className = '' }) {
 
 export function StatCard({ title, value, icon, link }) {
   return (
-    <Link
+    <Link // Теперь Link определён
       to={link}
       className="bg-white p-6 rounded-lg shadow hover:shadow-md transition-shadow block"
     >

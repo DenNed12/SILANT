@@ -4,33 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c598108f-50ff-46af-b947-e45874c02661" name="Changes" comment="started front">
+    <list default="true" id="c598108f-50ff-46af-b947-e45874c02661" name="Changes" comment="front fixes">
+      <change afterPath="$PROJECT_DIR$/backend/users/serializers.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/ProtectedRoute.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/api/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/Card.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/UI/StatCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/auth/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/auth/Register.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/complaints/ComplaintForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/complaints/ComplaintList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/machines/MachineDetail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/machines/MachineForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/machines/MachineList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/maintenance/MaintenanceForm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/components/maintenance/MaintenanceList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/ComplaintsPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MachinesPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/pages/MaintenancePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/authSlice.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/frontend/src/store/machinesSlice.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/pages/CatalogPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/users/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/ProtectedRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/ProtectedRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/UI/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/UI/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/auth/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/auth/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/auth/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MachinesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/MachinesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/authSlice.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/authSlice.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,13 +102,22 @@
       <option name="project" value="LOCAL" />
       <updated>1746200993505</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="front fixes">
+      <option name="closed" value="true" />
+      <created>1746205866948</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746205866948</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="backend basics" />
     <MESSAGE value="backend v2 + started front" />
     <MESSAGE value="started front" />
-    <option name="LAST_COMMIT_MESSAGE" value="started front" />
+    <MESSAGE value="front fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="front fixes" />
   </component>
 </project>

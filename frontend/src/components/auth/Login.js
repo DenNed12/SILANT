@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../../store/authSlice';
-import api from '../../api/api';
+import { loginUser } from '../../store/authSlice';
+
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -12,14 +12,14 @@ function Login() {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await dispatch(login({ username, password })).unwrap();
-      navigate('/');
-    } catch (err) {
-      setError('Неверные учетные данные');
-    }
-  };
+  e.preventDefault();
+  try {
+    await dispatch(loginUser({ username, password })).unwrap();
+    navigate('/');
+  } catch (error) {
+    setError(error.message);
+  }
+};
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
