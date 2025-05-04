@@ -8,6 +8,7 @@ import Dashboard from './pages/Dashboard';
 import CatalogPage from './pages/CatalogPage';
 import MachinesPage from './pages/MachinesPage';
 
+
 function App() {
   return (
     <Provider store={store}>
@@ -16,17 +17,16 @@ function App() {
           {/* Публичные маршруты */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/catalog" element={<CatalogPage />} />
 
-          {/* Полу-публичные маршруты (требуют аутентификации) */}
-          <Route element={<ProtectedRoute />}>
-            <Route path="/" element={<Dashboard/>} />
-            <Route path="/catalog" element={<CatalogPage />} />
-          </Route>
-
-          {/* Защищенные маршруты (требуют определенных ролей) */}
+          {/* Защищенные маршруты */}
           <Route element={<ProtectedRoute allowedRoles={['CLIENT', 'MANAGER']} />}>
             <Route path="/machines" element={<MachinesPage />} />
           </Route>
+
+          {/* Обработка несуществующих маршрутов */}
+
         </Routes>
       </BrowserRouter>
     </Provider>
