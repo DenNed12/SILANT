@@ -1,34 +1,34 @@
-import { useEffect, useState} from 'react';
-import { useSelector} from 'react-redux';
-import api from '../api/api';
-import MachineList from '../components/machines/MachineList';
+import React from 'react';
+import { useSelector } from 'react-redux';
 
-function MachinesPage() {
-  const { user } = useSelector(state => state.auth);
-  const [machines, setMachines] = useState([]);
-
-  useEffect(() => {
-    const fetchMachines = async () => {
-      try {
-        const endpoint = user.role === 'CLIENT'
-          ? '/user/machines/'
-          : '/machines/';
-        const response = await api.get(endpoint);
-        setMachines(response.data);
-      } catch (error) {
-        console.error('Error fetching machines:', error);
-      }
-    };
-
-    fetchMachines();
-  }, [user]);
+const MachinesPage = () => {
+  // Получаем список машин напрямую из хранилища
+  const machines = useSelector(state => state.machines?.list || []);
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Мои машины</h1>
-      <MachineList machines={machines} role={user.role} />
+    <div className="machines-page">
+      <h2>Список всей техники</h2>
+
+      {machines.length > 0 ? (
+        <div className="machines-grid">
+          {machines.map(machine => (
+            <div key={machine.id} className="machine-card">
+              <h3>{machine.name}</h3>
+              <div className="machine-details">
+                <p>Заводской номер: {machine.serialNumber}</p>
+                <p>Модель: {machine.model}</p>
+                <p>Дата выпуска: {new Date(machine.releaseDate).toLocaleDateString()}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="no-machines">
+          На данный момент в системе нет зарегистрированной техники
+        </div>
+      )}
     </div>
   );
-}
+};
 
 export default MachinesPage;

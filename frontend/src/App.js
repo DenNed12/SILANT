@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
-import ProtectedRoute from './ProtectedRoute';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import Dashboard from './pages/Dashboard';
@@ -19,13 +18,9 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/catalog" element={<CatalogPage />} />
+          <Route path="/machines" element={<MachinesPage />} />
 
-          {/* Защищенные маршруты */}
-          <Route element={<ProtectedRoute allowedRoles={['CLIENT', 'MANAGER']} />}>
-            <Route path="/machines" element={<MachinesPage />} />
-          </Route>
 
-          {/* Обработка несуществующих маршрутов */}
 
         </Routes>
       </BrowserRouter>
