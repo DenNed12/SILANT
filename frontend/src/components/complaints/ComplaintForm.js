@@ -1,17 +1,16 @@
-import { useState } from 'react';
-import DatePicker from 'react-datepicker';
-import 'react-datepicker/dist/react-datepicker.css';
+import React from 'react';
 
-function ComplaintForm({ machines, failureNodes, onSubmit, onCancel }) {
-  const [formData, setFormData] = useState({
+const ComplaintForm = ({ machines, failureNodes, onSubmit, onCancel }) => {
+  const [formData, setFormData] = React.useState({
     machine: '',
-    failure_date: new Date(),
+    failure_date: '',
     operating_hours: '',
     failure_node: '',
     failure_description: '',
     recovery_method: '',
     spare_parts: '',
-    recovery_date: new Date()
+    recovery_date: '',
+    service_company: ''
   });
 
   const handleChange = (e) => {
@@ -25,12 +24,12 @@ function ComplaintForm({ machines, failureNodes, onSubmit, onCancel }) {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg mb-6">
-      <h2 className="text-xl font-bold mb-4">Новая рекламация</h2>
+    <div className="bg-white p-6 rounded-lg shadow-md">
+      <h2 className="text-xl font-bold mb-4">Добавить рекламацию</h2>
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-          <div>
-            <label className="block text-gray-700 mb-1">Машина</label>
+          <div className="form-group">
+            <label className="block mb-1">Машина</label>
             <select
               name="machine"
               value={formData.machine}
@@ -41,43 +40,26 @@ function ComplaintForm({ machines, failureNodes, onSubmit, onCancel }) {
               <option value="">Выберите машину</option>
               {machines.map(machine => (
                 <option key={machine.id} value={machine.id}>
-                  {machine.machine_serial}
+                  {machine.machine_serial} - {machine.machine_model?.title}
                 </option>
               ))}
             </select>
           </div>
 
-          <div>
-            <label className="block text-gray-700 mb-1">Узел отказа</label>
-            <select
-              name="failure_node"
-              value={formData.failure_node}
+          <div className="form-group">
+            <label className="block mb-1">Дата отказа</label>
+            <input
+              type="date"
+              name="failure_date"
+              value={formData.failure_date}
               onChange={handleChange}
               className="w-full p-2 border rounded"
-              required
-            >
-              <option value="">Выберите узел</option>
-              {failureNodes.map(node => (
-                <option key={node.id} value={node.id}>
-                  {node.title}
-                </option>
-              ))}
-            </select>
-          </div>
-
-          <div>
-            <label className="block text-gray-700 mb-1">Дата отказа</label>
-            <DatePicker
-              selected={formData.failure_date}
-              onChange={(date) => setFormData({...formData, failure_date: date})}
-              className="w-full p-2 border rounded"
-              dateFormat="dd.MM.yyyy"
               required
             />
           </div>
 
-          <div>
-            <label className="block text-gray-700 mb-1">Наработка (м/час)</label>
+          <div className="form-group">
+            <label className="block mb-1">Наработка, м/час</label>
             <input
               type="number"
               name="operating_hours"
@@ -88,20 +70,38 @@ function ComplaintForm({ machines, failureNodes, onSubmit, onCancel }) {
             />
           </div>
 
-          <div className="md:col-span-2">
-            <label className="block text-gray-700 mb-1">Описание отказа</label>
-            <textarea
-              name="failure_description"
-              value={formData.failure_description}
+          <div className="form-group">
+            <label className="block mb-1">Узел отказа</label>
+            <select
+              name="failure_node"
+              value={formData.failure_node}
               onChange={handleChange}
               className="w-full p-2 border rounded"
-              rows="3"
               required
-            />
+            >
+              <option value="">Выберите узел отказа</option>
+              {failureNodes.map(node => (
+                <option key={node.id} value={node.id}>{node.title}</option>
+              ))}
+            </select>
           </div>
+        </div>
 
-          <div>
-            <label className="block text-gray-700 mb-1">Способ восстановления</label>
+        <div className="mb-4">
+          <label className="block mb-1">Описание отказа</label>
+          <textarea
+            name="failure_description"
+            value={formData.failure_description}
+            onChange={handleChange}
+            className="w-full p-2 border rounded"
+            rows="3"
+            required
+          />
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div className="form-group">
+            <label className="block mb-1">Способ восстановления</label>
             <select
               name="recovery_method"
               value={formData.recovery_method}
@@ -110,13 +110,13 @@ function ComplaintForm({ machines, failureNodes, onSubmit, onCancel }) {
               required
             >
               <option value="">Выберите способ</option>
-              <option value="REPAIR">Ремонт</option>
-              <option value="REPLACE">Замена узла</option>
+              <option value="repair">Ремонт</option>
+              <option value="replacement">Замена узла</option>
             </select>
           </div>
 
-          <div>
-            <label className="block text-gray-700 mb-1">Используемые запчасти</label>
+          <div className="form-group">
+            <label className="block mb-1">Используемые запасные части</label>
             <input
               type="text"
               name="spare_parts"
@@ -126,19 +126,20 @@ function ComplaintForm({ machines, failureNodes, onSubmit, onCancel }) {
             />
           </div>
 
-          <div>
-            <label className="block text-gray-700 mb-1">Дата восстановления</label>
-            <DatePicker
-              selected={formData.recovery_date}
-              onChange={(date) => setFormData({...formData, recovery_date: date})}
+          <div className="form-group">
+            <label className="block mb-1">Дата восстановления</label>
+            <input
+              type="date"
+              name="recovery_date"
+              value={formData.recovery_date}
+              onChange={handleChange}
               className="w-full p-2 border rounded"
-              dateFormat="dd.MM.yyyy"
               required
             />
           </div>
         </div>
 
-        <div className="flex justify-end space-x-2">
+        <div className="flex justify-end gap-2">
           <button
             type="button"
             onClick={onCancel}
@@ -148,7 +149,7 @@ function ComplaintForm({ machines, failureNodes, onSubmit, onCancel }) {
           </button>
           <button
             type="submit"
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
           >
             Сохранить
           </button>
@@ -156,6 +157,6 @@ function ComplaintForm({ machines, failureNodes, onSubmit, onCancel }) {
       </form>
     </div>
   );
-}
+};
 
-export default function ComplaintForm() { ... }
+export default ComplaintForm;

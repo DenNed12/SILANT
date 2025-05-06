@@ -6,6 +6,8 @@ import Register from './components/auth/Register';
 import Dashboard from './pages/Dashboard';
 import CatalogPage from './pages/CatalogPage';
 import MachinesPage from './pages/MachinesPage';
+import MaintenancePage from './pages/MaintenancePage';
+import ComplaintsPage from './pages/ComplaintsPage';
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/catalog" element={<CatalogPage />} />
           <Route path="/machines" element={<MachinesPage />} />
+          <Route path="/maintenance" element={<MaintenancePage />} />
+          <Route path="/complaints" element={<ComplaintsPage />} />
 
 
 

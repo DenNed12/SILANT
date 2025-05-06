@@ -4,12 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c598108f-50ff-46af-b947-e45874c02661" name="Changes" comment="fixed all issues with components 3">
+    <list default="true" id="c598108f-50ff-46af-b947-e45874c02661" name="Changes" comment="main page fix">
+      <change afterPath="$PROJECT_DIR$/frontend/src/styles/components.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/styles/global.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/styles/pages.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/src/styles/variables.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/silant/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/silant/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/complaints/ComplaintForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/complaints/ComplaintForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/complaints/ComplaintList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/complaints/ComplaintList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/maintenance/MaintenanceForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/maintenance/MaintenanceForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/maintenance/MaintenanceList.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/maintenance/MaintenanceList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ComplaintsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/ComplaintsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/pages/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MachinesPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/MachinesPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MaintenancePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/pages/MaintenancePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +39,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/backend/silant/admin.py" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/backend/silant/models.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/src/pages/ComplaintsPage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/src/pages/Dashboard.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/src/pages/MachinesPage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/frontend/src/pages/MaintenancePage.js" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/venv/Scripts/activate.bat" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -39,12 +56,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/danii/PycharmProjects/django projects/SILANT/frontend/src",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\danii\PycharmProjects\django projects\SILANT\frontend\src" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -125,7 +148,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746377526381</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="main page fix">
+      <option name="closed" value="true" />
+      <created>1746472344899</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1746472344899</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -136,6 +167,7 @@
     <MESSAGE value="fixed all issues with components" />
     <MESSAGE value="fixed all issues with components 2" />
     <MESSAGE value="fixed all issues with components 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed all issues with components 3" />
+    <MESSAGE value="main page fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="main page fix" />
   </component>
 </project>

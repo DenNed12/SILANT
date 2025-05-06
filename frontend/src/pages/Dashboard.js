@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Table, Card, Statistic, Row, Col, Button, Tag } from 'antd';
 import { ToolOutlined, WarningOutlined } from '@ant-design/icons';
 
@@ -9,6 +9,7 @@ const Dashboard = () => {
   const machines = useSelector(state => state.machines?.list || []);
   const maintenances = useSelector(state => state.maintenances?.recent || []);
   const complaints = useSelector(state => state.complaints?.recent || []);
+  const navigate = useNavigate();
 
   const columns = [
     {
@@ -60,15 +61,19 @@ const Dashboard = () => {
       key: 'actions',
       render: (_, record) => (
         <div className="flex gap-2">
-          <Button size="small">
-            <Link to={`/maintenance?machine=${record.id}`}>
-              <ToolOutlined /> ТО
-            </Link>
+          <Button
+            size="small"
+            icon={<ToolOutlined />}
+            onClick={() => navigate(`/maintenance?machine=${record.id}`)}
+          >
+            ТО
           </Button>
-          <Button size="small">
-            <Link to={`/complaints?machine=${record.id}`}>
-              <WarningOutlined /> Рекламации
-            </Link>
+          <Button
+            size="small"
+            icon={<WarningOutlined />}
+            onClick={() => navigate(`/complaints?machine=${record.id}`)}
+          >
+            Рекламации
           </Button>
         </div>
       ),
@@ -128,8 +133,12 @@ const Dashboard = () => {
                 value={machines.length}
                 prefix="🚜"
               />
-              <Button type="link" block>
-                <Link to="/machines">Перейти к списку</Link>
+              <Button
+                type="link"
+                block
+                onClick={() => navigate('/machines')}
+              >
+                Перейти к списку
               </Button>
             </Card>
           </Col>
@@ -140,8 +149,12 @@ const Dashboard = () => {
                 value={maintenances.length}
                 prefix={<ToolOutlined />}
               />
-              <Button type="link" block>
-                <Link to="/maintenance">Перейти к техосмотрам</Link>
+              <Button
+                type="link"
+                block
+                onClick={() => navigate('/maintenance')}
+              >
+                Перейти к техосмотрам
               </Button>
             </Card>
           </Col>
@@ -152,8 +165,12 @@ const Dashboard = () => {
                 value={complaints.length}
                 prefix={<WarningOutlined />}
               />
-              <Button type="link" block>
-                <Link to="/complaints">Перейти к рекламациям</Link>
+              <Button
+                type="link"
+                block
+                onClick={() => navigate('/complaints')}
+              >
+                Перейти к рекламациям
               </Button>
             </Card>
           </Col>
@@ -162,12 +179,12 @@ const Dashboard = () => {
         {/* Таблица с машинами */}
         <Card
           title="Список техники"
-          extra={<Link to="/machines">Посмотреть все</Link>}
+          extra={<Button type="link" onClick={() => navigate('/machines')}>Посмотреть все</Button>}
           className="mb-6"
         >
           <Table
             columns={columns}
-            dataSource={machines.slice(0, 5)} // Показываем только 5 последних
+            dataSource={machines.slice(0, 5)}
             rowKey="id"
             pagination={false}
             size="middle"
